@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  web:
+    build:
+      context: .           # Ubicación del Dockerfile
+    ports:
+      - "8080:80"          # Mapea el puerto 80 del contenedor al 8080 de tu máquina
+    volumes:
+      - ./src:/var/www/html  # Sincroniza tu carpeta local con el contenedor
+
